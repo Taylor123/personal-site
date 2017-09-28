@@ -2,13 +2,14 @@
 
 const React = require('react');
 const Link = require('react-router').Link;
+const ProjectCard = require('./projectCard');
 const PROJECTS = require('../projects');
 const {Parallax, Card, Row, Col} = require('react-materialize');
 
 const paraStyle = {
     maxWidth: '100%'
 };
-
+// TODO fix key warning by assigning keys where necessary
 
 
 class Index extends React.Component {
@@ -38,15 +39,19 @@ class Index extends React.Component {
         <div>
           <Row>
             <h5 className='center'>Stuff I've Built</h5>
-            <Col s={12} m={8} offset='m2'>
-              {
-                Object.keys(PROJECTS).map(id =>
-                  <Row className='center'>
-                    <div key={id}><Link to={`/project/${id}`}>{PROJECTS[id].name}</Link></div>
-                  </Row>
-                )
-              }
-            </Col>
+            {
+              Object.keys(PROJECTS).map( (id, key) =>
+                <Col s={12} m={6}>
+                  <ProjectCard 
+                  key={key}
+                  id={id} 
+                  name={PROJECTS[id].name} 
+                  imageUri={PROJECTS[id].imageUri}
+                  description={PROJECTS[id].shortDescription}>
+                  </ProjectCard>
+                </Col>
+              )
+            }
           </Row>
         </div>
       </div>
