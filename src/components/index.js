@@ -17,14 +17,15 @@ class Index extends React.Component {
     return (
       <div>
         <Row className='center'>
-          <h1>Taylor Johnson</h1>
+          <h1 className='white-text'>Taylor Johnson</h1>
         </Row>
         <Parallax style={paraStyle} imageSrc='/dist/images/solo-surfer.jpg' />
 
-        <div className='section white'>
+        <div className='section'>
           <Row>
             <Col s={12} m={8} offset='m2'>
-              <Card className='small hoverable' 
+              <Card 
+              className='small hoverable' 
               title='About'
               actions={[
                 <a href='https://www.linkedin.com/in/taylor-johnson-8921a5a1/' target='_blank'>LinkedIn</a>,
@@ -36,7 +37,7 @@ class Index extends React.Component {
           </Row>
         </div>
 
-        <div>
+        <div className='section brown lighten-4'>
           <Row>
             <h5 className='center'>Stuff I've Built</h5>
             {
