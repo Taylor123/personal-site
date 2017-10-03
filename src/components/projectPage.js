@@ -3,7 +3,7 @@
 const React = require('react');
 const Link = require('react-router').Link;
 const PROJECTS = require('../projects');
-const {Card, Button, Row, Col} = require('react-materialize');
+const {Navbar, NavItem, Card, Button, Row, Col} = require('react-materialize');
 
 const colSeparation = {
   marginTop: '3%'
@@ -28,37 +28,44 @@ class ProjectPage extends React.Component {
     let project = PROJECTS[this.id];
     return (
       <div>
-        <Row className='left-align'>
-          <Col>
-            <Link to='/'><h4>Taylor Johnson</h4></Link>
-          </Col>
+        <Navbar 
+        className='blue-grey lighten-1' 
+        brand='Taylor Johnson'
+        right>
+          <NavItem href='/'>Home</NavItem>
+        </Navbar>
+        <Row>
+            <h1 className='center white-text title'>{project.name}</h1>
         </Row>
         <Row>
           <div className='valign-wrapper'>
             <Col s={12} m={7}>
               <Card
-                className='hoverable'
-                title={project.name}>
+                className='hoverable'>
                 <h5>{project.shortDescription}</h5>
                 <p className='flow-text'>{project.description}</p>
               </Card>  
             </Col>
 
-            <Col s={12} m={5}>
-              <p className='center'>responsive image of site on comp</p>
+            <Col s={12} m={5} className='hide-on-small-only'>
+              <img className='responsive-img' src={project.imageUri} />
             </Col>
           </div>
         </Row>
-      
-        <Row className='center'>
-          {
-            project.stack.map( (tech, key) => 
-              <Col style={colSeparation} key={key} s={6} m={4} l={3}>
-                <Button style={stackStyle} waves='light'>{tech}</Button>
-              </Col>
-            )
-          }
-        </Row>
+        <div className='section brown lighten-4'>
+          <Row>
+            <Col s={12}>
+              <h5>Stack</h5>
+            </Col>
+            {
+              project.stack.map( (tech, key) => 
+                <Col style={colSeparation} key={key} s={6} m={4} l={3}>
+                  <Button className='stack-btn blue-grey lighten-1 white-text' waves='light'>{tech}</Button>
+                </Col>
+              )
+            }
+          </Row>
+        </div>
 
         <Row className='white-text'>
           <Col s={12}>

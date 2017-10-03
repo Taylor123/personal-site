@@ -19,7 +19,7 @@ class ProjectCard extends React.Component {
       header={<CardTitle reveal image={this.imageUri} waves='light'></CardTitle>}
       title={this.name}
       reveal={<p className='center'>{this.description}</p>}
-      actions={[<Link to={`/project/${this.id}`}>Check It Out</Link>]}>
+      actions={[<Link key={this.id} to={`/project/${this.id}`}>Learn More</Link>]}>
       </Card>
     );
   }
