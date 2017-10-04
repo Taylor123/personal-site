@@ -6,8 +6,6 @@ const ProjectCard = require('./projectCard');
 const PROJECTS = require('../projects');
 const {Parallax, Card, Row, Col} = require('react-materialize');
 
-// TODO fix key warning by assigning keys where necessary
-
 
 class Index extends React.Component {
   render() {
