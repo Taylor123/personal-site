@@ -5,7 +5,7 @@ const React = require('react');
 const ReactDom = require('react-dom/server');
 const Router = require('react-router');
 const routesConfig = require('./src/routesConfig');
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 
 const app = Express();
 
