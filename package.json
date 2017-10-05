@@ -6,13 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "npm install -g babel-cli && babel-node server.js"
+    "start": "npm install -g babel-cli && webpack && babel-node server.js"
   },
   "author": "Taylor Johnson",
   "license": "ISC",
-  "devDependencies": {
-    "webpack": "^3.6.0"
-  },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -25,6 +22,7 @@
     "react": "^15.0.0-rc.1",
     "react-dom": "^15.0.0-rc.1",
     "react-materialize": "^1.0.14",
-    "react-router": "^2.0.1"
+    "react-router": "^2.0.1",
+    "webpack": "^3.6.0"
   }
 }
