@@ -1,0 +1,27 @@
+body {
+  background-color: #263238;
+}
+
+.title {
+  font-weight: 300;
+}
+
+/*
+  CSS for Index component
+*/
+
+.parallax-width {
+  max-width: 100%;
+}
+
+.social-link {
+  margin: 10px;
+}
+
+/*
+  CSS for ProjectPage component
+*/
+
+.stack-btn {
+  width: 80%;
+}
