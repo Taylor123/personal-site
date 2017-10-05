@@ -8,7 +8,7 @@ const routesConfig = require('./routesConfig');
 
 class Routes extends React.Component {
   render() {
-    return <Router history={browserHistory} routes={routesConfig}/>;
+    return <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory} routes={routesConfig}/>;
   }
 }
 
