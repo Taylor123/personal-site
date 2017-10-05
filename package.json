@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "babel-node server.js"
+    "start": "npm install -g babel-cli && babel-node server.js"
   },
   "author": "Taylor Johnson",
   "license": "ISC",
