@@ -14522,7 +14522,9 @@ var ReactDOM = __webpack_require__(86);
 var Routes = __webpack_require__(229);
 
 window.onload = function () {
-  ReactDOM.render(React.createElement(Routes, null), document.getElementById('main'));
+  ReactDOM.render(React.createElement(Routes, { onUpdate: function onUpdate() {
+      return window.scrollTo(0, 0);
+    } }), document.getElementById('main'));
 };
 
 /***/ }),
@@ -26461,7 +26463,9 @@ var Routes = function (_React$Component) {
   _createClass(Routes, [{
     key: 'render',
     value: function render() {
-      return React.createElement(Router, { history: browserHistory, routes: routesConfig });
+      return React.createElement(Router, { onUpdate: function onUpdate() {
+          return window.scrollTo(0, 0);
+        }, history: browserHistory, routes: routesConfig });
     }
   }]);
 
