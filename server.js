@@ -5,6 +5,7 @@ const React = require('react');
 const ReactDom = require('react-dom/server');
 const Router = require('react-router');
 const routesConfig = require('./src/routesConfig');
+const port = process.env.port || 8080;
 
 const app = Express();
 
@@ -26,9 +27,9 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, (err) => {
+app.listen(port, (err) => {
   if (err) {
     return console.error(err);
   }
-  console.info('Server running on http://localhost:3000');
+  console.info('Server running...');
 });
