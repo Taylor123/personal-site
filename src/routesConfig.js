@@ -1,6 +1,6 @@
 "use strict";
 
-const Index = require('./components/Index');
+const Index = require('./components/index');
 const ProjectPage = require('./components/projectPage');
 const NotFound = require('./components/notFound');
 
