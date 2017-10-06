@@ -9,8 +9,8 @@ const port = process.env.PORT || 8080;
 
 const app = Express();
 
-app.set('view engine', 'ejs');
 app.use('/dist', Express.static('dist'));
+app.set('view engine', 'ejs');
 
 app.get('*', (req, res) => {
   Router.match({routes: routesConfig, location: req.url}, (error, redirectLocation, renderProps) => {
