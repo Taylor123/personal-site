@@ -12,9 +12,7 @@ module.exports = {
                     ' mouth and eventually grew into the web platform it is today. Serving college students, along with other' +
                     ' ambitious entrepreneurs, VentureStorm has helped connected hundreds of companies to the developers they' +
                     ' needed.',
-    'learnings': [
-      ''
-    ],                
+    'learnings': [],                
     'contributions': [
       'Strategy',
       'Web Development',
@@ -36,6 +34,31 @@ module.exports = {
     'hosting': [
       'Heroku',
       'AWS'
+    ]
+  },
+
+  'LearnLux': {
+    'name': 'LearnLux',
+    'imageUri': '/dist/images/learnlux-landing.png',
+    'shortDescription': 'Financial education for millenials',
+    'goal': '',
+    'description': '',
+    'learnings': [],
+    'contributions': [
+      'Web Development',
+      'Growth Strategy',
+      'Analytics',
+      'Application Architecture'
+    ],
+    'stack': [
+      'AngularJS',
+      'Firebase',
+      'HTML',
+      'CSS',
+      'Materialize'
+    ],
+    'hosting': [
+      'Firebase'
     ]
   }
 };
