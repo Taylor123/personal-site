@@ -5,13 +5,6 @@ const Link = require('react-router').Link;
 const PROJECTS = require('../projects');
 const {Navbar, NavItem, Card, Button, Row, Col} = require('react-materialize');
 
-const colSeparation = {
-  marginTop: '3%'
-}
-const stackStyle = {
-  width: '80%'
-}
-
 // TODO clean up UI of stack
 // TODO Add other media, so more images and/or video
 // TODO make image section mobile responsive (it happens because of the valign-wrapper)
@@ -59,7 +52,7 @@ class ProjectPage extends React.Component {
             </Col>
             {
               project.stack.map( (tech, key) => 
-                <Col style={colSeparation} key={key} s={6} m={4} l={3}>
+                <Col className='col-separate' key={key} s={6} m={4} l={3}>
                   <Button className='stack-btn blue-grey lighten-1 white-text' waves='light'>{tech}</Button>
                 </Col>
               )

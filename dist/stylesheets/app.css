@@ -18,6 +18,10 @@ body {
   margin: 10px;
 }
 
+#project-cards-row .card .card-image {
+  max-height: 200px;
+}
+
 /*
   CSS for ProjectPage component
 */
@@ -27,5 +31,5 @@ body {
 }
 
 .col-separate {
-  margin-top: '3%';
+  margin-top: 3%;
 }

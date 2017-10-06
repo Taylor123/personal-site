@@ -56,11 +56,11 @@ class Index extends React.Component {
         </div>
 
         <div className='section brown lighten-4'>
-          <Row>
+          <Row id='project-cards-row'>
             <h4 className='center'>Stuff I've Built</h4>
             {
               Object.keys(PROJECTS).map( (id, key) =>
-                <Col s={12} m={6} key={key}>
+                <Col s={12} m={4} key={key}>
                   <ProjectCard 
                   id={id} 
                   name={PROJECTS[id].name} 
