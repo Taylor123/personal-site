@@ -13,6 +13,7 @@ class Index extends React.Component {
       <div>
         <Row className='center'>
           <h1 className='white-text title'>Taylor Johnson</h1>
+          <a className='grey-text' href='https://github.com/Taylor123/personal-site' target='_blank'><p>Site is still under construction</p></a>
         </Row>
         <Parallax className='parallax-width' imageSrc='/dist/images/solo-surfer.jpg' />
 
@@ -60,7 +61,7 @@ class Index extends React.Component {
             <h4 className='center'>Stuff I've Built</h4>
             {
               Object.keys(PROJECTS).map( (id, key) =>
-                <Col s={12} m={4} key={key}>
+                <Col s={12} m={6} l={4} key={key}>
                   <ProjectCard 
                   id={id} 
                   name={PROJECTS[id].name} 

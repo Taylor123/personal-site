@@ -19,6 +19,10 @@ class ProjectPage extends React.Component {
 
   render() {
     let project = PROJECTS[this.id];
+    let externalLink = null;
+    if (project.externalLink)
+      externalLink = <a className='grey-text' href={project.externalLink} target='_blank'>view live</a>
+
     return (
       <div>
         <Navbar 
@@ -27,8 +31,9 @@ class ProjectPage extends React.Component {
         right>
           <NavItem href='/'>Home</NavItem>
         </Navbar>
-        <Row>
-            <h1 className='center white-text title'>{project.name}</h1>
+        <Row className='center'>
+            <h1 className='white-text title'>{project.name}</h1>
+            {externalLink}
         </Row>
         <Row>
           <div className='valign-wrapper'>

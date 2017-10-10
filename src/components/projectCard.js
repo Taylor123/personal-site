@@ -16,10 +16,10 @@ class ProjectCard extends React.Component {
   render() {
     return (
       <Card
-      header={<CardTitle reveal image={this.imageUri} waves='light'></CardTitle>}
+      header={<CardTitle image={this.imageUri} waves='light'></CardTitle>}
       title={this.name}
-      reveal={<p className='center'>{this.description}</p>}
       actions={[<Link key={this.id} to={`/project/${this.id}`}>Learn More</Link>]}>
+        <p>{this.description}</p>
       </Card>
     );
   }

@@ -10,3 +10,4 @@
   - Add employment history
   - Add more projects
   - Create API for project data, vs json file
+  - Image/Video carsouel for projects
